@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+ <link rev="made" href="mailto:joi@ioi-jp.org">
+<title>JOI 2011-2012 予選 問題２</title>
+</head>
+<body>
+
+<table border="0" cellspacing="5">
+ <tr>
+  <td><img src="../images/JOIlogo_color_100.png" alt="JOI logo" width="100" height="100"></td>
+  <td width="50"></td>
+  <td>
+   <table border="0" align="center">
+    <tr>
+     <td width="550" height="30" align="center" 
+      style="color:#ffffff; background-color:#ff8844; 
+             font-size:x-large; font-weight:bold;">
+	            第11回日本情報オリンピック　予選２
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<p align="right">
+2011年12月18日<br>
+情報オリンピック日本委員会
+</p>
+
+<!-- JOI-TASK-START -->
+
+<table>
+ <tr>
+  <td>
+   <table border="0" cellpadding=2>
+    <tr>
+     <th width="80" height="70" align="center" 
+      style="font-size:large; 
+	     border-style:solid;
+	     border-color:black;">
+      問題<br>２
+     </th>
+     <th style="font-size:large;">
+       　　　サッカー (Soccer)
+     </th>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<h2 style="background-color:silver; border-style:groove; 
+	   margin-left:20px; margin-right:20px; padding:2pt; padding-left:20px;">
+  問題</h2>
+  
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+JOI 国ではサッカーが人気であり，JOI リーグというリーグ戦が毎週行われている．
+</p>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+JOI リーグには N 個のチームが所属していて，1 から N までの番号がつけられている．すべての組み合わせの試合がちょうど一度ずつ行われる．つまり， <nobr>N × (N - 1) / 2</nobr> 試合が行われる．各試合の勝敗はそれぞれのチームの得点で決まる．勝ったチームの勝ち点は 3 点であり，負けたチームの勝ち点は 0 点である．引き分けの場合，両チームの勝ち点は 1 点である．順位は各チームの獲得した勝ち点の合計で決定し，得失点差は考えない．勝ち点の合計が等しいチームの順位は上位に揃える．
+</p>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+例として， 4 チームでのリーグ戦を考える．<nobr>4 × (4 - 1) / 2 = 6</nobr> 試合が行われる．それらの結果が以下の表のようになったとする．ハイフンの左側はその横のチームの得点であり，右側はその縦のチームの得点である．
+</p>
+<table style="margin-left: 50px; margin-right: 50px;" border="1" cellspacing="1">
+	<tr>
+		<th></th>
+		<th align="center">&nbsp;&nbsp;チーム 1&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;チーム 2&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;チーム 3&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;チーム 4&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;勝ち数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;負け数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;引き分け数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;勝ち点&nbsp;&nbsp;</th>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 1&nbsp;&nbsp;</th>
+		<td align="center">---</td>
+		<td align="center">0 - 1</td>
+		<td align="center">2 - 1</td>
+		<td align="center">2 - 2</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">4</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 2&nbsp;&nbsp;</th>
+		<td align="center">1 - 0</td>
+		<td align="center">---</td>
+		<td align="center">1 - 1</td>
+		<td align="center">3 - 0</td>
+		<td align="center">2</td>
+		<td align="center">0</td>
+		<td align="center">1</td>
+		<td align="center">7</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 3&nbsp;&nbsp;</th>
+		<td align="center">1 - 2</td>
+		<td align="center">1 - 1</td>
+		<td align="center">---</td>
+		<td align="center">1 - 3</td>
+		<td align="center">0</td>
+		<td align="center">2</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 4&nbsp;&nbsp;</th>
+		<td align="center">2 - 2</td>
+		<td align="center">0 - 3</td>
+		<td align="center">3 - 1</td>
+		<td align="center">---</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">4</td>
+	</tr>
+</table>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+このとき，勝ち点の最も多いチーム 2 が 1 位である．</br>
+その次に勝ち点が多いチームはチーム 1 とチーム 4 であり，これらのチームの順位は共に 2 位である．</br>
+そして勝ち点が最も少ないチーム 3 が 4 位である．
+</p>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+全ての試合の結果が与えられたとき，各チームの順位を求めるプログラムを作成せよ．
+</p>
+
+<h2 style="background-color:silver; border-style:groove; 
+	   margin-left:20px; margin-right:20px; padding:2pt; padding-left:20px;">
+  入力</h2>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+入力ファイルの 1 行目にはチームの個数 N (2 ≦ N ≦ 100) が書かれている．続く <nobr>N × (N - 1) / 2</nobr> 行には各試合の結果が書かれている．i + 1 行目 (1 ≦ i ≦ <nobr>N × (N - 1) / 2</nobr>) には整数 A<sub>i</sub>，B<sub>i</sub>，C<sub>i</sub>，D<sub>i</sub> (1 ≦ A<sub>i</sub> ≦ N，1 ≦ B<sub>i</sub> ≦ N，0 ≦ C<sub>i</sub> ≦ 100，0 ≦ D<sub>i</sub> ≦ 100) が空白を区切りとして書かれており，チーム A<sub>i</sub> とチーム B<sub>i</sub> が対戦し，チーム A<sub>i</sub> の得点が C<sub>i</sub> 点，チーム B<sub>i</sub> の得点が D<sub>i</sub> 点であったことを表す．全ての i について A<sub>i</sub> ≠ B<sub>i</sub> であり，同じ組み合わせの対戦が書かれていることはない．
+</p>
+
+
+
+<h2 style="background-color:silver; border-style:groove; 
+	   margin-left:20px; margin-right:20px; padding:2pt; padding-left:20px;">
+  出力</h2>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+出力は N 行からなる．各行は 1 つの整数からなり， i 行目 (1 ≦ i ≦ N) の整数はチーム i の順位を表す．
+</p>
+
+<h2 style="background-color:silver; border-style:groove; 
+	   margin-left:20px; margin-right:20px; padding:2pt; padding-left:20px;">
+  入出力例</h2>
+<table style="margin-left: 50px; margin-right: 50px;">
+ <tr>
+  <th width="200" align="left"><a href="./2012-yo-t2-in_s1.txt" target="_blank">入力例 1</a></th>  
+  <th width="150" align="left"><a href="./2012-yo-t2-in_s2.txt" target="_blank">入力例 2</a></th>  
+ </tr>
+ <tr><td valign="top">
+  <pre>
+4
+1 2 0 1
+1 3 2 1
+1 4 2 2
+2 3 1 1
+2 4 3 0
+3 4 1 3
+  </pre></td>
+   <td valign="top"><pre>
+5
+1 2 1 1
+3 4 3 1
+5 1 1 2
+2 3 0 0
+4 5 2 3
+1 3 0 2
+5 2 2 2
+4 1 4 5
+3 5 4 0
+2 4 0 1
+   </pre></td>
+ </tr>
+ <tr>
+   <th width="200" align="left"><a href="./2012-yo-t2-out_s1.txt" target="_blank">出力例 1</a></th>
+   <th width="150" align="left"><a href="./2012-yo-t2-out_s2.txt" target="_blank">出力例 2</a></th>
+ </tr>
+ <tr>
+  <td valign="top"><pre>
+2
+1
+4
+2
+  </pre></td>
+  <td valign="top"><pre>
+2
+4
+1
+4
+3
+  </pre></td>
+ </tr>
+</table>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+入出力例 1 は問題文中の例に対応している．
+</p>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+入出力例 2 における結果は以下の通りである．
+</p>
+
+<table style="margin-left: 50px; margin-right: 50px;" border="1" cellspacing="1">
+	<tr>
+		<th></th>
+		<th align="center">&nbsp;&nbsp;勝ち数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;負け数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;引き分け数&nbsp;&nbsp;</th>
+		<th align="center">&nbsp;&nbsp;勝ち点&nbsp;&nbsp;</th>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 1&nbsp;&nbsp;</th>
+		<td align="center">2</td>
+		<td align="center">1</td>
+		<td align="center">1</td>
+		<td align="center">7</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 2&nbsp;&nbsp;</th>
+		<td align="center">0</td>
+		<td align="center">1</td>
+		<td align="center">3</td>
+		<td align="center">3</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 3&nbsp;&nbsp;</th>
+		<td align="center">3</td>
+		<td align="center">0</td>
+		<td align="center">1</td>
+		<td align="center">10</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 4&nbsp;&nbsp;</th>
+		<td align="center">1</td>
+		<td align="center">3</td>
+		<td align="center">0</td>
+		<td align="center">3</td>
+	</tr>
+	<tr>
+		<th align="center">&nbsp;&nbsp;チーム 5&nbsp;&nbsp;</th>
+		<td align="center">1</td>
+		<td align="center">2</td>
+		<td align="center">1</td>
+		<td align="center">4</td>
+	</tr>
+</table>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+※各入出力例のデータは，
+右クリック等によりファイルに保存して利用可能です．
+</p>
+
+<!-- JOI-TASK-END -->
+
+<!-- 作業時確認用データリスト開始  -->
+<hr>
+
+<h3>採点用データ</h3>
+
+<div align="center">
+<table border="2" summary="予選：採点用データ">
+ <tr>
+  <th colspan="5"> 入力データ </th>
+  <td width="70" align="center"><a href="./2012-yo-t2-in1.txt">入力1</a></td>
+  <td width="70" align="center"><a href="./2012-yo-t2-in2.txt">入力2</a></td>
+  <td width="70" align="center"><a href="./2012-yo-t2-in3.txt">入力3</a></td>
+  <td width="70" align="center"><a href="./2012-yo-t2-in4.txt">入力4</a></td>
+  <td width="70" align="center"><a href="./2012-yo-t2-in5.txt">入力5</a></td>
+ </tr>
+</table>
+</div>
+
+<!-- 作業時確認用データリスト終了  -->
+
+</body>
+</html>

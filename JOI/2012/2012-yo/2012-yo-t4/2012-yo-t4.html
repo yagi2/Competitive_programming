@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="ja">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="Content-Style-Type" content="text/css">
+ <link rev="made" href="mailto:joi@ioi-jp.org">
+<title>JOI 2011-2012 予選 問題４</title>
+</head>
+<body>
+
+<table border="0" cellspacing="5">
+ <tr>
+  <td><img src="../images/JOIlogo_color_100.png" alt="JOI logo" width="100" height="100"></td>
+  <td width="50"></td>
+  <td>
+   <table border="0" align="center">
+    <tr>
+     <td width="550" height="30" align="center" 
+      style="color:#ffffff; background-color:#ff8844; 
+             font-size:x-large; font-weight:bold;">
+	            第11回日本情報オリンピック　予選４
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<p align="right">
+2011年12月18日<br>
+情報オリンピック日本委員会
+</p>
+
+<!-- JOI-TASK-START -->
+
+<table>
+ <tr>
+  <td>
+   <table border="0" cellpadding=2>
+    <tr>
+     <th width="80" height="70" align="center" 
+      style="font-size:large; 
+	     border-style:solid;
+	     border-color:black;">
+      問題<br>４
+     </th>
+     <th style="font-size:large;">
+       　　　パスタ (Pasta)
+     </th>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<h2 style="background-color:silver; border-style:groove; 
+	   margin-left:20px; margin-right:20px; padding:2pt; padding-left:20px;">
+  問題</h2>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+あなたはパスタが大好物であり，毎日，晩御飯にパスタを作って食べている．あなたはトマトソース，クリームソース，バジルソースの 3 種類のパスタを作ることができる．
+</p>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+N 日間の晩御飯の予定を考えることにした．それぞれの日に 3 種類のパスタから 1 種類を選ぶ．ただし，同じパスタが続くと飽きてしまうので，3 日以上連続して同じパスタを選んではいけない．また，N 日のうちの K 日分のパスタはすでに決めてある．
+</p>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+入力として N の値と，K 日分のパスタの情報が与えられたとき，条件をみたす予定が何通りあるかを 10000 で割った余りを求めるプログラムを作成せよ．
+</p>
+
+<h2 style="background-color:silver; border-style:groove; 
+	   margin-left:20px; margin-right:20px; padding:2pt; padding-left:20px;">
+  入力</h2>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+入力は K + 1 行からなる．
+</p>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+1 行目には 2 つの整数 N, K (3 ≦ N ≦ 100，1 ≦ K ≦ N) が空白を区切りとして書かれている．
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+1 + i 行目 (1 ≦ i ≦ K) には 2 つの整数 A<sub>i</sub>, B<sub>i</sub> (1 ≦ A<sub>i</sub> ≦ N，1 ≦ B<sub>i</sub> ≦ 3) が空白を区切りとして書かれている．これは，A<sub>i</sub> 日目のパスタはすでに決まっており，B<sub>i</sub> = 1 のときはトマトソースであり，B<sub>i</sub> = 2 のときはクリームソースであり，B<sub>i</sub> = 3 のときはバジルソースであることを表す．A<sub>i</sub> (1 ≦ i ≦ K) は全て異なる．与えられる入力データにおいて，条件をみたす予定は 1 通り以上あることが保証されている．
+</p>
+
+<h2 style="background-color:silver; border-style:groove; 
+	   margin-left:20px; margin-right:20px; padding:2pt; padding-left:20px;">
+  出力</h2>
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+条件をみたす予定が何通りあるかを 10000 で割った余りを 1 行で出力せよ．
+</p>
+
+<h2 style="background-color:silver; border-style:groove; 
+	   margin-left:20px; margin-right:20px; padding:2pt; padding-left:20px;">
+  入出力例</h2>
+<table style="margin-left: 50px; margin-right: 50px;">
+ <tr>
+  <th width="150" align="left"><a href="./2012-yo-t4-in_s1.txt" target="_blank">入力例 1</a></th>  
+  <th width="150" align="left"><a href="./2012-yo-t4-in_s2.txt" target="_blank">入力例 2</a></th>  
+ </tr>
+ <tr><td valign="top">
+  <pre>
+5 3
+3 1
+1 1
+4 2
+  </pre>
+ </td>
+ <td valign="top">
+  <pre>
+20 5
+10 2
+4 3
+12 1
+13 2
+9 1
+  </pre>
+ </td>
+ </tr>
+ <tr>
+   <td>　</td>
+ </tr>
+ <tr>
+   <th width="150" align="left"><a href="./2012-yo-t4-out_s1.txt" target="_blank">出力例 1</a></th>
+   <th width="150" align="left"><a href="./2012-yo-t4-out_s2.txt" target="_blank">出力例 2</a></th>
+ </tr>
+ <tr>
+  <td>
+   <pre>
+6
+   </pre>
+  </td>
+  <td>
+   <pre>
+2640
+   </pre>
+  </td>
+ </tr>
+</table>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+入出力例 1 において，あなたは 5 日間の予定を考える．1 日目と 3 日目はトマトソースであり，4 日目はクリームソースである．また，3 日以上連続して同じパスタを選んではいけない．これらの条件をみたす予定は 6 通りある．
+
+<table style="margin-left: 50px; margin-right: 50px;">
+ <tr>
+  <th></th>
+  <th>&nbsp;1日目&nbsp;</th>
+  <th>&nbsp;2日目&nbsp;</th>
+  <th>&nbsp;3日目&nbsp;</th>
+  <th>&nbsp;4日目&nbsp;</th>
+  <th>&nbsp;5日目&nbsp;</th>
+ </tr>
+ <tr>
+  <th>予定 1&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+ </tr>
+ <tr>
+  <th>予定 2&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">2</td>
+ </tr>
+ <tr>
+  <th>予定 3&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">3</td>
+ </tr>
+ <tr>
+  <th>予定 4&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">3</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">1</td>
+ </tr>
+ <tr>
+  <th>予定 5&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">3</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">2</td>
+ </tr>
+ <tr>
+  <th>予定 6&nbsp;&nbsp;&nbsp;</th>
+  <td align="center">1</td>
+  <td align="center">3</td>
+  <td align="center">1</td>
+  <td align="center">2</td>
+  <td align="center">3</td>
+ </tr>
+</table>
+
+この表では，1 はトマトソースを，2 はクリームソースを，3 はバジルソースを表す．
+</p>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+入出力例 2 において，条件をみたす予定は全部で 4112640 通りある．それを 10000 で割った余りである 2640 を出力する．
+</p>
+
+<p style="line-height: 200%;  margin-left: 30px; margin-right: 30px;">
+※各入出力例のデータは，
+右クリック等によりファイルに保存して利用可能です．
+</p>
+
+<!-- JOI-TASK-END -->
+
+<!-- 作業時確認用データリスト開始  -->
+<hr>
+
+<h3>採点用データ</h3>
+
+<div align="center">
+<table border="2" summary="予選：採点用データ">
+ <tr>
+  <th colspan="5"> 入力データ </th>
+  <td width="70" align="center"><a href="./2012-yo-t4-in1.txt">入力1</a></td>
+  <td width="70" align="center"><a href="./2012-yo-t4-in2.txt">入力2</a></td>
+  <td width="70" align="center"><a href="./2012-yo-t4-in3.txt">入力3</a></td>
+  <td width="70" align="center"><a href="./2012-yo-t4-in4.txt">入力4</a></td>
+  <td width="70" align="center"><a href="./2012-yo-t4-in5.txt">入力5</a></td>
+ </tr>
+</table>
+</div>
+
+<!-- 作業時確認用データリスト終了  -->
+
+</body>
+</html>
